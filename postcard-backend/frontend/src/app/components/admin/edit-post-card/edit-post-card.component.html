@@ -1,0 +1,21 @@
+<admin-dashboard></admin-dashboard>
+<div class="container">
+    <div align="center" class="column">
+        <h1 style="color: rgb(15, 15, 14); margin-bottom: 50px">Edit Post Card</h1>
+        <div class="form_bg">
+            <form [formGroup]="editPostCardForm">
+                <div class="form-group" style="margin-top: 50px">
+                    <div style="width: 400px; padding-top: 50px; margin-left: 65px" *ngIf="status === true">
+                        <textarea class="postcard" formControlName="postcard" cols="70" rows="10">{{postCard.postCard}}</textarea>
+                    </div>
+                </div>
+                <br />
+                <div class="form-group" style="margin-top: 50px; margin-left: 270px">
+                    <button class="btn btn-primary" (click)="editCard(editPostCardForm)">
+            Update
+          </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

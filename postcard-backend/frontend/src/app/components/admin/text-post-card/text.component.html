@@ -1,0 +1,19 @@
+<admin-dashboard></admin-dashboard>
+<div align="center" class="container">
+    <h1 style="color: rgb(15, 15, 14)">Your Text Post Cards</h1>
+    <div class="column">
+        <button style="margin-left: 1200px; margin-top: 20px" class="btn btn-primary" (click)="showpopup()" data-open="modal1">
+      New Card
+    </button>
+        <div class="row">
+            <div *ngFor="let card of cardData" class="card text-center">
+                <!-- <img class="listing-logo" src="../../../assets/images/hero.jpg"> -->
+                <p>{{ card.postCard }}</p>
+                <button (click)="editCard(card._id)">edit</button>
+                <button (click)="deleteCard(card._id)">delete</button>
+                <!-- <a class="btn-2" (click)='showpopup()'> Apply for this position </a> -->
+            </div>
+        </div>
+    </div>
+</div>
+<admin-textpostcard class="modal" id="modal1" data-animation="slideInOutLeft"></admin-textpostcard>

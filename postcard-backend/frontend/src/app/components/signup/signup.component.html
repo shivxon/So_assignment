@@ -1,0 +1,48 @@
+<div class="container">
+    <div align="center" class="column">
+        <div class="form_bg">
+            <h1>Sign Up</h1>
+            <form [formGroup]="signupForm">
+                <div *ngIf="error === true" class="error">
+                    <ul>
+                        <li *ngIf="message['jobTitle']">
+                            <h4>{{ message.email.message }}</h4>
+                        </li>
+
+                        <li *ngIf="message['category']">
+                            <h4>{{ message.password.message }}</h4>
+                        </li>
+
+                        <!-- <li style="color: rgb(253, 2, 2)" *ngIf="message['companyhq']">
+                            <h4>{{message.companyhq.message}} </h4>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Full Name" type="text" formControlName="fullName" />
+                </div>
+
+                <br />
+                <div class="form-group">
+                    <input class="form-control" placeholder="Email" type="email" formControlName="email" />
+                </div>
+
+                <br />
+                <div class="form-group">
+                    <input class="form-control" placeholder="Password" type="password" formControlName="password" />
+                </div>
+                <br />
+                <br />
+                <div class="form-group">
+                    <button type="submit " class="btn btn-primary" (click)="register(signupForm)">
+            SIGN UP
+          </button>
+                </div>
+                <br />
+                <a routerLinkActive="active" routerLink="/login">
+          Already Have Account? Login
+        </a>
+            </form>
+        </div>
+    </div>
+</div>

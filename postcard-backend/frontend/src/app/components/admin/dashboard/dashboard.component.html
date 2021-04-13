@@ -1,0 +1,15 @@
+<header>
+    <div class="header-row-menu">
+        <h5 style="margin-left: 30px" *ngIf="flag === true">
+            {{ profile.fullName }}
+        </h5>
+        <div class="header-plan">
+            <a routerLink="/admin/text-post-card">
+                <h3>Text Post Cards</h3>
+            </a>
+        </div>
+        <div style="margin-left: 700px; cursor: pointer">
+            <h3 (click)="logout()">Logout</h3>
+        </div>
+    </div>
+</header>
